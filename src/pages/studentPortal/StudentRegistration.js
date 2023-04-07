@@ -1,0 +1,141 @@
+import { Link, useNavigate } from "react-router-dom";
+import logo from "../../assets/image/learningportal.svg";
+import { useEffect, useState } from "react";
+import { useRegisterMutation } from "../../features/auth/authApi";
+import Error from "./../../components/ui/Error";
+
+export default function StudentRegistration() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [confirmPassword, setConfirmPassword] = useState("");
+  const [error, setError] = useState("");
+
+  const navigate = useNavigate();
+
+  const [register, { data, isLoading, isError, isSuccess }] =
+    useRegisterMutation();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
+    const data = {
+      name,
+      email,
+      password,
+      role: "student",
+    };
+
+    if (confirmPassword !== password) {
+      setError("Passwords do not match");
+    } else {
+      register(data);
+    }
+  };
+
+  useEffect(() => {
+    if (isSuccess) {
+      navigate("/course/1");
+    }
+    if (isError) {
+      setError("Failed to create account");
+    }
+  }, [data, isError, isSuccess, navigate]);
+
+  return (
+    <section className="py-6 bg-primary h-screen grid place-items-center">
+      <div className="mx-auto max-w-md px-5 lg:px-0">
+        <div>
+          <img
+            className="h-12 mx-auto"
+            src={logo}
+            alt="logo"
+          />
+          <h2 className="mt-6 text-center text-3xl font-extrabold text-slate-100">
+            Create Your New Account
+          </h2>
+        </div>
+        <form
+          className="mt-8 space-y-6"
+          method="POST"
+          onSubmit={handleSubmit}
+        >
+          <div className="rounded-md shadow-sm -space-y-px">
+            <div>
+              <input
+                id="name"
+                name="name"
+                type="text"
+                autoComplete="name"
+                required
+                className="login-input rounded-t-md"
+                placeholder="Student Name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                id="email-address"
+                name="email"
+                type="email"
+                autoComplete="email"
+                required
+                className="login-input "
+                placeholder="Email address"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                id="password"
+                name="password"
+                type="password"
+                autoComplete="current-password"
+                required
+                className="login-input"
+                placeholder="Password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+            <div>
+              <input
+                id="confirm-password"
+                name="confirm-password"
+                type="password"
+                autoComplete="confirm-password"
+                required
+                className="login-input rounded-b-md"
+                placeholder="Confirm Password"
+                value={confirmPassword}
+                onChange={(e) => setConfirmPassword(e.target.value)}
+              />
+            </div>
+          </div>
+          <div className="flex items-center justify-between text-sm">
+            <p className="text-gray-400 capitalize">Already Have an Account?</p>
+            <Link
+              to="/"
+              className="font-medium text-violet-600 hover:text-violet-500"
+            >
+              Login
+            </Link>
+          </div>
+          <div>
+            <button
+              type="submit"
+              disabled={isLoading}
+              className="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-violet-600 hover:bg-violet-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-violet-500"
+            >
+              Create Account
+            </button>
+          </div>
+
+          {error !== "" && <Error message={error} />}
+        </form>
+      </div>
+    </section>
+  );
+}

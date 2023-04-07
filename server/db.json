@@ -48,26 +48,60 @@
       "role": "student",
       "name": "Arif",
       "id": 7
+    },
+    {
+      "email": "mozo.postbox@gmail.com",
+      "password": "$2a$10$l5aA0iUvai5k.PK5Cz313eo961uui2NT9mc1LwQXcqCZVVRLNl16m",
+      "name": "Mozahidul Islam",
+      "role": "student",
+      "id": 8
     }
   ],
   "videos": [
     {
       "id": 1,
-      "title": "Debounce Function in JavaScript - JavaScript Job Interview question",
-      "description": "In this video, I have explained about the debounce function in JavaScript. This is a common question interviewers ask at Job Interviews. If you watch this video carefully, you will understand what is debounce and how to handle it with custom debounce function.",
-      "url": "https://www.youtube.com/embed/dD9O8DnIBj4",
-      "views": "51.2K",
-      "duration": "5:30",
+      "title": "Learn Debounce And Throttle In 16 Minutes",
+      "description": "Debounce and throttle are two easy techniques to implement that will drastically increase the performance of any site that has heavy API usage. In this video I show you how to implement both techniques, compare the pros/cons of each, and give real world examples of when to use each technique.",
+      "url": "https://www.youtube.com/embed/cjIswDCKgu0",
+      "views": "126k",
+      "duration": "16:27",
       "createdAt": "2023-01-15T15:17:01.727Z"
     },
     {
       "id": 2,
-      "title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "title": "JavaScript Tips and Tricks - JavaScript Interview Questions",
       "description": "JavaScript Tips and Tricks - JavaScript Job Interview Questions - Bangla Tutorial \nIn this video, I have shown 8 more JavaScript pro tips that will make a JavaScript Developer's life easier.",
       "url": "https://www.youtube.com/embed/E9_R88eKcBM",
       "views": "91.2K",
       "duration": "31:30",
       "createdAt": "2023-02-24T17:59:00.000Z"
+    },
+    {
+      "title": "The Perfect Hook For Debugging React ",
+      "description": "The useDebugValue hook is a very simple hook that serves one purpose, but it does that one thing very well. Because of its niche nature most people don’t learn it, but this hook can make debugging and building custom hooks a bit easier which is why I recommend learning it.",
+      "url": "https://www.youtube.com/embed/pTF86K8JZBQ",
+      "views": "23k",
+      "duration": "8:06",
+      "createdAt": "2023-04-05T05:34:49.495Z",
+      "id": 3
+    },
+    {
+      "title": "Build a responsive, animated accordion that looks pretty good",
+      "description": "Accordions are a pretty common thing that we find on websites these days, but they’re often… a little bit lacking, either with awkward animations, or a complete lack of animations, and sometimes just looking pretty ugly.\n\nI recently came across an awesome codepen by Zed Dash that looked fantastic, and I thought it would be the perfect starting place to creating a responsive, and importantly, very good looking accordion that could help add a little delight to a users experience with a site.",
+      "url": "https://www.youtube.com/embed/WJERnXiFFug",
+      "views": "12k",
+      "duration": "1:17:58",
+      "createdAt": "2023-04-05T05:36:53.504Z",
+      "id": 4
+    },
+    {
+      "title": "test video",
+      "description": "for testing",
+      "url": "https://www.youtube.com/embed/UhJ8cas5XX0",
+      "views": "25k",
+      "duration": "1:15",
+      "createdAt": "2023-04-07T00:31:26.258Z",
+      "id": 5
     }
   ],
   "assignments": [
@@ -84,6 +118,27 @@
       "video_id": 2,
       "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
       "totalMark": 100
+    },
+    {
+      "title": "Assignment 3 -  Create Custom React Hooks For Debugging More Efficiently.",
+      "video_id": 3,
+      "video_title": "The Perfect Hook For Debugging Custom React Hooks",
+      "totalMark": 100,
+      "id": 3
+    },
+    {
+      "title": "Assignment 4 - Build a responsive, animated accordion with React",
+      "video_id": 4,
+      "video_title": "Build a responsive, animated accordion that looks pretty good",
+      "totalMark": 100,
+      "id": 4
+    },
+    {
+      "title": "test Assignment",
+      "video_id": 5,
+      "video_title": "test video",
+      "totalMark": 50,
+      "id": 5
     }
   ],
   "quizzes": [
@@ -94,12 +149,12 @@
       "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
       "options": [
         {
-          "id": "1",
+          "id": 1,
           "option": "A function that is called after a certain time interval",
           "isCorrect": true
         },
         {
-          "id": "2",
+          "id": 2,
           "option": "A function that is called after a certain time interval",
           "isCorrect": false
         },
@@ -122,12 +177,12 @@
       "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
       "options": [
         {
-          "id": "1",
+          "id": 1,
           "option": "A search bar where the results are displayed as you type.",
           "isCorrect": true
         },
         {
-          "id": "2",
+          "id": 2,
           "option": "A button that performs an action when clicked.",
           "isCorrect": false
         },
@@ -170,6 +225,90 @@
           "isCorrect": false
         }
       ]
+    },
+    {
+      "question": "What is the purpose of the useDebugValue hook in React?",
+      "video_id": 3,
+      "video_title": "The Perfect Hook For Debugging Custom React Hooks",
+      "options": [
+        {
+          "id": 1,
+          "option": "To log debugging messages to the console",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "To set breakpoints in the code",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "To provide additional information about the hook's value in the React DevTools",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "To optimize the performance of the hook",
+          "isCorrect": false
+        }
+      ],
+      "id": 4
+    },
+    {
+      "question": "What is the recommended HTML element to use for creating an accessible CSS accordion?",
+      "video_id": 4,
+      "video_title": "Build a responsive, animated accordion that looks pretty good",
+      "options": [
+        {
+          "id": 1,
+          "option": "`<ul>`",
+          "isCorrect": false
+        },
+        {
+          "id": 2,
+          "option": "`<div>`",
+          "isCorrect": false
+        },
+        {
+          "id": 3,
+          "option": "`<section>`",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "`<details>`",
+          "isCorrect": true
+        }
+      ],
+      "id": 5
+    },
+    {
+      "question": "Test Quiz",
+      "video_id": 5,
+      "video_title": "test video",
+      "options": [
+        {
+          "id": 1,
+          "option": "01",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": "02",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "03",
+          "isCorrect": true
+        },
+        {
+          "id": 4,
+          "option": "047",
+          "isCorrect": false
+        }
+      ],
+      "id": 6
     }
   ],
   "assignmentMark": [
@@ -181,15 +320,15 @@
       "title": "Assignment 1 - Implement Debounce Function",
       "createdAt": "2021-01-15T15:17:01.727Z",
       "totalMark": 100,
-      "mark": 0,
+      "mark": 80,
       "repo_link": "https://github.com/Learn-with-Sumit/assignment-1",
-      "status": "pending"
+      "status": "published"
     },
     {
       "id": 2,
       "student_id": 2,
       "student_name": "Saad Hasan",
-      "assignment_id": 1,
+      "assignment_id": 2,
       "title": "Assignment 2 - Implement Best Practices",
       "createdAt": "2021-01-15T15:17:01.727Z",
       "totalMark": 100,
@@ -198,10 +337,10 @@
       "status": "published"
     },
     {
-      "id": 2,
+      "id": 3,
       "student_id": 3,
       "student_name": "Akash Ahmed",
-      "assignment_id": 1,
+      "assignment_id": 2,
       "title": "Assignment 2 - Implement Best Practices",
       "createdAt": "2021-01-15T15:17:01.727Z",
       "totalMark": 100,
@@ -222,6 +361,30 @@
       "totalWrong": 1,
       "totalMark": 10,
       "mark": 5
+    },
+    {
+      "student_id": 8,
+      "student_name": "Mozahidul Islam",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "totalQuiz": 2,
+      "totalCorrect": 2,
+      "totalWrong": 0,
+      "totalMark": 10,
+      "mark": 10,
+      "id": 2
+    },
+    {
+      "student_id": 8,
+      "student_name": "Mozahidul Islam",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "totalQuiz": 1,
+      "totalCorrect": 0,
+      "totalWrong": 1,
+      "totalMark": 5,
+      "mark": 0,
+      "id": 3
     }
   ]
 }
