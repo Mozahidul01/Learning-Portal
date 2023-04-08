@@ -28,7 +28,7 @@ export default function AssignmentMarks() {
   if (!isLoading && !isError && assignmentMarks?.length === 0) {
     content = (
       <p className="px-6 py-4 font-medium text-center shadow capitalize">
-        No Assignment Found
+        No Assignment Mark Found
       </p>
     );
   }

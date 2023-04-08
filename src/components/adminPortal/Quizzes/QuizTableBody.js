@@ -27,7 +27,7 @@ export default function QuizTableBody() {
   if (!isLoading && !isError && quizzes?.length === 0) {
     content = (
       <p className="px-6 py-4 font-medium text-center shadow capitalize">
-        No Assignment Found
+        No Quiz Found
       </p>
     );
   }
