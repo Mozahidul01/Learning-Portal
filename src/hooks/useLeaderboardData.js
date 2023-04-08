@@ -109,14 +109,9 @@ export default function useLeaderboardData() {
       });
 
       // Sort students based on rank
-      leaderboardData.sort((a, b) => a.rank - b.rank);
+      const sortedLeaderBoard = leaderboardData.sort((a, b) => a.rank - b.rank);
 
-      // Only show top 20 rank students
-      const top20Leaderboard = leaderboardData.filter(
-        (student) => student.rank <= 20
-      );
-
-      setLeaderboardData(top20Leaderboard);
+      setLeaderboardData(sortedLeaderBoard);
     }
   }, [
     quizzesMark,

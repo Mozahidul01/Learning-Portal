@@ -11,6 +11,11 @@ export default function LeaderBoard() {
   //get the leaderboard data from custom hook
   const leaderboardData = useLeaderboardData();
 
+  // filter top 20 rank students
+  const top20Leaderboard = leaderboardData.filter(
+    (student) => student.rank <= 20
+  );
+
   //find the user Rank
   const userRank = leaderboardData.find((data) => data.studentId === user.id);
 
@@ -34,7 +39,7 @@ export default function LeaderBoard() {
               <LeaderboardHead />
 
               <tbody>
-                {leaderboardData.map((data) => (
+                {top20Leaderboard.map((data) => (
                   <StudentRow
                     key={data.id}
                     data={data}
