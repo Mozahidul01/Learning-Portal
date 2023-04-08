@@ -75,7 +75,7 @@ The Learning Portal Application was built with the following technologies:
 
 ## Author
 
--The author of this project is Mozahidul01. You can find more information about him on [GitHub](https://github.com/mozahidul01).
+The author of this project is Mozahidul Islam. You can find more information about him on [GitHub](https://github.com/mozahidul01).
 
 ## Acknowledgments
 
