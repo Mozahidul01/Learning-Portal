@@ -1,46 +1,82 @@
-# Getting Started with Create React App and Redux
+# Learning Portal Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
+This project is an example application that showcases how to use React and Redux Toolkit (RTK) to build a role-based CRUD application. The project includes two portals: the Admin Portal and the Student Portal. The Admin Portal is designed for authorized users who can manage various items such as videos, quizzes, and assignments, and assign grades for assignments. The Student Portal is designed for users who can view available videos and take quizzes and assignments. The application uses Redux for state management, and RTK-Query to fetch data from the server.
 
-## Available Scripts
+## Prerequisites
 
-In the project directory, you can run:
+Before you can run this project, you need to have Node.js installed on your machine.
 
-### `npm start`
+### Installing
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+To install the project, follow these steps:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+1. Clone this repository to your local machine.
+2. Open your terminal and navigate to the project directory.
+3. Run the following command to install the project dependencies:
 
-### `npm test`
+``` bash
+npm install
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Running the App
 
-### `npm run build`
+To run the application, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- In your terminal, navigate to the project directory and then go to the server folder.
+- Run the following command to install the server dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+``` bash
+npm install
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Run the following command to start the server:
 
-### `npm run eject`
+``` bash
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Now, navigate back to the project directory and run the following command to start the development server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+``` bash
+npm start
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Open your browser and go to `http://localhost:3000/` to see the app.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Project Structure
 
-## Learn More
+- `server`: Contain JSON Demo server.
+- `src/`
+  - `app/`: Contains redux store.
+  - `components/`: Contains all the React components used in the app.
+    - `adminPortal/`: Contains all the Admin components used in the app.
+    - `common/`: Contains all the Common components that are shared between both the Student and Admin Portals.
+    - `studentPortal/`: Contains all the Student components used in the app.
+    - `ui/`: Contains all the utility components used in the app.
+  - `features/`: Contains all the Redux features.
+  - `hooks/`: Contains all the Custom Hooks.
+  - `pages/`: Contains all the Routes of the app.
+    - `adminPortal/`: Contains all the Routes of Admin Portal.
+    - `Routes/`: Contains all the logic and functionality of React Router Dom.
+    - `studentPortal/`: Contains all the Routes of Student Portal.
+  - `App.js`: The main component that renders all other components.
+  - `index.css`: Contains all the necessary CSS for this application.
+  - `index.js`: The application's entry point that renders the App component wrapped with the Provider component to provide the Redux store to the entire application.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Built With
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The Learning Portal Application was built with the following technologies:
+
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces, which allows developers to create reusable UI components and manage application state efficiently.
+- [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps, which provides a centralized location for storing and updating application state, making it easier to manage complex data flows and interactions.
+- [Redux Toolkit](https://redux-toolkit.js.org/) - An opinionated, efficient, and easy-to-use library for Redux that reduces boilerplate and provides powerful abstractions for managing application state. It includes utilities for simplifying common Redux use cases like store setup, creating reducers and actions, and handling asynchronous data fetching.
+- [React Router Dom](https://reactrouter.com/en/main) - A popular library for declaratively routing web applications in React.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework that provides a set of pre-defined classes for building responsive and customizable UI components quickly and easily.
+
+## Author
+
+-The author of this project is Mozahidul01. You can find more information about him on [GitHub](https://github.com/mozahidul01).
+
+## Acknowledgments
+
+This project was created as a sample project to showcase how to use React and RTK-Query together to build a role-based CRUD app. It was created as an assignment for the LWS - Think in a redux way course.

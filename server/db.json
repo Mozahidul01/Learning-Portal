@@ -660,6 +660,18 @@
       "totalMark": 5,
       "mark": 5,
       "id": 24
+    },
+    {
+      "student_id": 2,
+      "student_name": "Saad Hasan",
+      "video_id": 2,
+      "video_title": "#2 JavaScript Tips and Tricks - JavaScript Job Interview Questions",
+      "totalQuiz": 1,
+      "totalCorrect": 1,
+      "totalWrong": 0,
+      "totalMark": 5,
+      "mark": 5,
+      "id": 25
     }
   ]
 }
