@@ -1,6 +1,4 @@
-import React from "react";
-
-export default function LeaderTableHead() {
+export default function LeaderboardHead() {
   return (
     <thead>
       <tr className="border-b border-slate-600/50">

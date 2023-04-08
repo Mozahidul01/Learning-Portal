@@ -1,8 +1,19 @@
-import LeaderTable from "../../components/studentPortal/LeaderBoard/LeaderTable";
-import LeaderTableHead from "../../components/studentPortal/LeaderBoard/LeaderTableHead";
 import Navbar from "../../components/studentPortal/Navbar/Navbar";
+import useLeaderboardData from "../../hooks/useLeaderboardData";
+import StudentRow from "../../components/studentPortal/LeaderBoard/StudentRow";
+import { useSelector } from "react-redux";
+import UserRow from "../../components/studentPortal/LeaderBoard/UserRow";
+import LeaderboardHead from "../../components/studentPortal/LeaderBoard/LeaderboardHead";
 
 export default function LeaderBoard() {
+  const { user } = useSelector((state) => state.auth);
+
+  //get the leaderboard data from custom hook
+  const leaderboardData = useLeaderboardData();
+
+  //find the user Rank
+  const userRank = leaderboardData.find((data) => data.studentId === user.id);
+
   return (
     <>
       <Navbar />
@@ -10,22 +21,24 @@ export default function LeaderBoard() {
         <div className="mx-auto max-w-7xl px-5 lg:px-0">
           <div>
             <h3 className="text-lg font-bold">Your Position in Leaderboard</h3>
-            <table className="text-base w-full border border-slate-600/50 rounded-md my-4">
-              <LeaderTableHead />
-              <tbody>
-                <tr className="border-2 border-cyan">
-                  <td className="table-td text-center font-bold">4</td>
-                  <td className="table-td text-center font-bold">Saad Hasan</td>
-                  <td className="table-td text-center font-bold">50</td>
-                  <td className="table-td text-center font-bold">50</td>
-                  <td className="table-td text-center font-bold">100</td>
-                </tr>
-              </tbody>
-            </table>
+
+            <UserRow userRank={userRank} />
           </div>
+
           <div className="my-8">
             <h3 className="text-lg font-bold">Top 20 Result</h3>
-            <LeaderTable />
+            <table className="text-base w-full border border-slate-600/50 rounded-md my-4">
+              <LeaderboardHead />
+
+              <tbody>
+                {leaderboardData.map((data) => (
+                  <StudentRow
+                    key={data.id}
+                    data={data}
+                  />
+                ))}
+              </tbody>
+            </table>
           </div>
         </div>
       </section>
