@@ -1,8 +1,14 @@
 import LeaderboardHead from "./LeaderboardHead";
 
-export default function UserRow({ userRank }) {
+export default function UserRow({ userRank, name }) {
   const { rank, studentName, quizMark, assignmentMark, totalMark } =
-    userRank || {};
+    userRank || {
+      rank: "-",
+      studentName: name,
+      quizMark: "-",
+      assignmentMark: "-",
+      totalMark: "-",
+    };
 
   return (
     <table className="text-base w-full border border-slate-600/50 rounded-md my-4">

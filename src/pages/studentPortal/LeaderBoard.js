@@ -22,7 +22,10 @@ export default function LeaderBoard() {
           <div>
             <h3 className="text-lg font-bold">Your Position in Leaderboard</h3>
 
-            <UserRow userRank={userRank} />
+            <UserRow
+              userRank={userRank}
+              name={user.name}
+            />
           </div>
 
           <div className="my-8">
