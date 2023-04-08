@@ -2,7 +2,9 @@
 
 This project is an example application that showcases how to use React and Redux Toolkit (RTK) to build a role-based CRUD application. The project includes two portals: the Admin Portal and the Student Portal. The Admin Portal is designed for authorized users who can manage various items such as videos, quizzes, and assignments, and assign grades for assignments. The Student Portal is designed for users who can view available videos and take quizzes and assignments. The application uses Redux for state management, and RTK-Query to fetch data from the server.
 
-## Prerequisites
+## Getting Started
+
+### Prerequisites
 
 Before you can run this project, you need to have Node.js installed on your machine.
 
