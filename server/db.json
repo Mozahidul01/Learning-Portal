@@ -62,6 +62,13 @@
       "name": "Dummy Student",
       "role": "student",
       "id": 9
+    },
+    {
+      "email": "alvi@gmail.com",
+      "password": "$2a$10$AO6MXJVD3PJ5nYfeax1JWudJ3wB6p63hdQKpeHjPuf9CZ3B.fWZjW",
+      "name": "Alvi",
+      "role": "student",
+      "id": 10
     }
   ],
   "videos": [
@@ -100,6 +107,15 @@
       "duration": "1:17:58",
       "createdAt": "2023-04-05T05:36:53.504Z",
       "id": 4
+    },
+    {
+      "title": "demo video",
+      "description": "demo",
+      "url": "https://www.youtube.com/embed/iF0I8LaBnGA",
+      "views": "250k",
+      "duration": "2;14",
+      "createdAt": "2023-04-11T04:59:06.042Z",
+      "id": 5
     }
   ],
   "assignments": [
@@ -130,6 +146,13 @@
       "video_title": "Build a responsive, animated accordion that looks pretty good",
       "totalMark": 100,
       "id": 4
+    },
+    {
+      "title": "Demo Assignment",
+      "video_id": 5,
+      "video_title": "demo video",
+      "totalMark": 200,
+      "id": 5
     }
   ],
   "quizzes": [
@@ -168,24 +191,24 @@
       "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
       "options": [
         {
-          "id": 1,
-          "option": "A search bar where the results are displayed as you type.",
-          "isCorrect": true
-        },
-        {
           "id": 2,
-          "option": "A button that performs an action when clicked.",
-          "isCorrect": false
+          "isCorrect": false,
+          "option": "A button that performs an action when clicked."
         },
         {
           "id": 3,
-          "option": "An animation that plays when a user hovers over an element.",
-          "isCorrect": false
+          "isCorrect": false,
+          "option": "An animation that plays when a user hovers over an element."
+        },
+        {
+          "id": 1,
+          "isCorrect": true,
+          "option": "A search bar where the results are displayed as you type."
         },
         {
           "id": 4,
-          "option": "All of the above.",
-          "isCorrect": false
+          "isCorrect": false,
+          "option": "All of the above."
         }
       ]
     },
@@ -272,6 +295,34 @@
         }
       ],
       "id": 5
+    },
+    {
+      "question": "Hello",
+      "video_id": 5,
+      "video_title": "demo video",
+      "options": [
+        {
+          "id": 1,
+          "option": "01",
+          "isCorrect": true
+        },
+        {
+          "id": 2,
+          "option": "02",
+          "isCorrect": true
+        },
+        {
+          "id": 3,
+          "option": "04",
+          "isCorrect": false
+        },
+        {
+          "id": 4,
+          "option": "05",
+          "isCorrect": false
+        }
+      ],
+      "id": 6
     }
   ],
   "assignmentMark": [
@@ -370,6 +421,18 @@
       "repo_link": "https://github.com/Learn-with-Sumit/assignment-4",
       "status": "published",
       "id": 9
+    },
+    {
+      "student_id": 10,
+      "student_name": "Alvi",
+      "assignment_id": 1,
+      "title": "Assignment 1 - Implement Debounce Function",
+      "createdAt": "2023-04-11T04:57:10.375Z",
+      "totalMark": 100,
+      "mark": 80,
+      "repo_link": "https://www.extendoffice.com/documents/excel/4025-excel-dynamic-image-in-cell.html",
+      "status": "published",
+      "id": 10
     }
   ],
   "quizMark": [
@@ -672,6 +735,30 @@
       "totalMark": 5,
       "mark": 5,
       "id": 25
+    },
+    {
+      "student_id": 10,
+      "student_name": "Alvi",
+      "video_id": 1,
+      "video_title": "Debounce Function in JavaScript - JavaScript Job Interview question",
+      "totalQuiz": 2,
+      "totalCorrect": 1,
+      "totalWrong": 1,
+      "totalMark": 10,
+      "mark": 5,
+      "id": 26
+    },
+    {
+      "student_id": 10,
+      "student_name": "Alvi",
+      "video_id": 5,
+      "video_title": "demo video",
+      "totalQuiz": 1,
+      "totalCorrect": 0,
+      "totalWrong": 1,
+      "totalMark": 5,
+      "mark": 0,
+      "id": 27
     }
   ]
 }
